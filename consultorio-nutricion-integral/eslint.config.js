@@ -22,8 +22,13 @@ export default [
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      prettier,
     },
+    extends:[ 
+      'plugin:prettier/recommended',
+    ],
     rules: {
+      'prettier/prettier': 'error',
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
